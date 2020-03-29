@@ -1,4 +1,4 @@
-# cling-root-sync
+# sync-root-cern
 
 ![llvm-sync](https://github.com/NobodyXu/cling-root-sync/workflows/llvm-sync/badge.svg?branch=master)
 ![clang-sync](https://github.com/NobodyXu/cling-root-sync/workflows/clang-sync/badge.svg?branch=master)
