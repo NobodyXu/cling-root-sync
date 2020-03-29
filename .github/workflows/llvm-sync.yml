@@ -1,4 +1,4 @@
-name: clang-sync
+name: llvm-sync
 
 on:
   push:
