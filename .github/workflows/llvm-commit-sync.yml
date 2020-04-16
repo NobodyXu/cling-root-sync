@@ -1,4 +1,4 @@
-name: llvm-sync
+name: llvm-commit-sync
 
 on:
   push:
