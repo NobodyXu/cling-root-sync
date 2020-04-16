@@ -1,0 +1,22 @@
+name: llvm-tag-sync
+
+on:
+  push:
+    
+  schedule:
+  - cron:  "00 19 * * *"
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: repo-sync
+      uses: wei/git-sync@v1
+      env:
+        SOURCE_REPO: "http://root.cern.ch/git/llvm.git"
+        SOURCE_BRANCH: "refs/tags/*"
+        DESTINATION_REPO: "git@github.com:NobodyXu/llvm-root-cern-fork.git"
+        DESTINATION_BRANCH: "refs/tags/*"
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      with:
+        args: $SOURCE_REPO $SOURCE_BRANCH $DESTINATION_REPO $DESTINATION_BRANCH
